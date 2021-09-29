@@ -4,7 +4,7 @@ require_once "banco.php";
 
 try{
     $stmt = $banco->prepare('SELECT id, nome, email, telefone from contatos where id_usuario = :id and
-        nome LIKE :q');
+        (nome LIKE :q or email LIKE :q or telefone LIKE :q)' );
     $stmt->bindValue(':id', $_SESSION['id']);
     $stmt->bindValue(":q", '%' . $_GET['q'] . '%');
     $stmt->execute();
