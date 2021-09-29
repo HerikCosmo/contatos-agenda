@@ -10,9 +10,16 @@
 <body>
     <a href="sair.php">Sair</a>
     <h1>olá <?php echo $_SESSION['nome'] ?></h1>
-    <a href="cadastro_contato.php">Cadastrar Contato</a>
-
-    <?php require "lista_contatos.php" ?>
+    <a href="cadastro_contato.php">Cadastrar Contato</a><hr>
+    <form action="index.php" method="get">
+        <input type="text" name='q' placeholder="pesquisar por nome: " value="<?php echo isset($_GET['q']) ? $_GET['q'] : ''; ?>">
+        <input type="submit" value="Pesquisar">
+    </form>
+    <hr>
+    <?php 
+        !isset($_GET['q']) ? require "lista_contatos.php" : require "lista_contatos_pesquisa.php";
+    
+    ?>
     <table border=1>
         <thead>
             <tr>
