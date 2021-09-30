@@ -1,4 +1,7 @@
-<?php require "valida_autorizacao.php" ?>
+<?php 
+    require "valida_autorizacao.php"; 
+    require "lista_contatos.php";
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -16,10 +19,6 @@
         <input type="submit" value="Pesquisar">
     </form>
     <hr>
-    <?php 
-        !isset($_GET['q']) ? require "lista_contatos.php" : require "lista_contatos_pesquisa.php";
-    
-    ?>
     <table border=1>
         <thead>
             <tr>
