@@ -2,10 +2,11 @@
 require_once "valida_autorizacao.php";
 require "banco.php";
 
-$query = !isset($_GET['q']) ? 
-            'SELECT id, nome, email, telefone from contatos where id_usuario = :id' :
-            'SELECT id, nome, email, telefone from contatos where id_usuario = :id and
-            (nome LIKE :q or email LIKE :q or telefone LIKE :q)';
+$query = 'SELECT id, nome, email, telefone from contatos where id_usuario = :id';
+
+if(isset($_GET['q'){
+    $query .= ' and (nome LIKE :q or email LIKE :q or telefone LIKE :q)';
+}
 
 try{
     $stmt = $banco->prepare($query);
