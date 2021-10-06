@@ -4,7 +4,7 @@ require "banco.php";
 
 $query = 'SELECT id, nome, email, telefone from contatos where id_usuario = :id';
 
-if(isset($_GET['q'){
+if(isset($_GET['q'])){
     $query .= ' and (nome LIKE :q or email LIKE :q or telefone LIKE :q)';
 }
 
