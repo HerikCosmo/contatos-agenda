@@ -32,7 +32,7 @@
             <div class="col-md-10 px-0">
             <form action="index.php" method="get" class="form-inline">
                 <div class="input-group">
-                <input type="text" class="form-control" name='q' placeholder="Nome / Email / Telefone " value="<?php echo isset($_GET['q']) ? $_GET['q'] : ''; ?>">
+                <input type="text" class="form-control" name='q' placeholder="Nome / Email / Telefone " value="<?php echo $_GET['q'] ?? ''; ?>">
                 <input type="submit" value="Pesquisar" class="btn btn-dark ml-1">
                 </div>
                 
