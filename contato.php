@@ -2,7 +2,6 @@
     require "valida_autorizacao.php";
     $modo = isset($_GET['id']) ? 'Edição' : 'Cadastro';
     $title = 'Agenda - '. $modo .' de Contato';
-    include_once "header.php";  
 
     if(isset($_GET['id'])){
         require_once "buscar_contato.php";
@@ -13,7 +12,7 @@
         $submit = "Cadastrar Contato";
     }
 
-
+    include_once "header.php";  
 ?>
     <form action="<?php echo $action ?>" method="post">
         <?php if(isset($_GET['id'])) { ?>
