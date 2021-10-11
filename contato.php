@@ -12,7 +12,8 @@
         $submit = "Cadastrar Contato";
     }
 
-    include_once "header.php";  
+    include "header.php"; 
+    include_once "header_principal.php"; 
 ?>
     <form action="<?php echo $action ?>" method="post">
         <?php if(isset($_GET['id'])) { ?>
