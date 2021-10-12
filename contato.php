@@ -12,7 +12,7 @@
         $submit = "Cadastrar Contato";
     }
 
-    include "header.php"; 
+    include_once "header.php"; 
     include_once "header_principal.php"; 
 ?>
     <form action="<?php echo $action ?>" method="post">
@@ -26,3 +26,4 @@
     </form>
 </body>
 </html>
+<?php include_once "footer.php";
