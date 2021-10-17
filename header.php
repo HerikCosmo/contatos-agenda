@@ -8,4 +8,4 @@
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
     <title><?php echo isset($title) ? $title : 'Agenda' ?></title>
 </head>
-<body>
+<body style="height: 100vh">
