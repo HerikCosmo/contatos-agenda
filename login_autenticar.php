@@ -21,8 +21,10 @@ try{
         $_SESSION['login'] = $usuario['login'];
 
         header("Location: index.php");
+        exit;
     }else{
         header("Location: login.php");
+        exit;
     }
 
 }catch(PDOException $e){
