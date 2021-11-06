@@ -17,12 +17,11 @@
                             <label for="senha">Senha: </label>
                             <input type="password" name='senha' id="senha" class="form-control">
                         </div>
-                            <input type="submit" value="Enviar" class="btn btn-primary">
+                            <input type="submit" value="Enviar" class="btn btn-dark">
                     </form>
                     <a class="card-link" href="cadastro_usuario.php">Ainda não tem uma conta? Cadastre-se</a>
                 </div> 
             </div>        
         </div>
     </main>
-</body>
-</html>
+    <?php include_once "footer.php";
